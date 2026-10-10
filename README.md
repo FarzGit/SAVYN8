@@ -98,7 +98,7 @@ All photos are free Unsplash images (Unsplash License: commercial use allowed, n
 
 The build is plain static files in `out/`.
 
-- **Vercel:** import the repo; `vercel.json` sets build command, output dir and security headers.
+- **Vercel:** import the repo with the **Next.js** framework preset (leave Output Directory empty/default, Vercel handles the static export); `vercel.json` sets the build command and security headers.
 - **Netlify / Cloudflare Pages:** build `pnpm build`, publish `out`; `public/_headers` sets security headers.
 - **Anything else (S3, nginx…):** upload `out/`.
 
