@@ -71,9 +71,6 @@ export function RingShowcase() {
         {/* 3D stage */}
         <div className="relative lg:col-span-7 lg:row-span-2 lg:row-start-1">
           <RingCanvas mode="story" interactive progressRef={progress} className="relative aspect-[6/5] w-full lg:aspect-[7/6]" />
-          <p className="absolute bottom-0 left-0 font-mono text-[11px] uppercase tracking-[0.12em] text-ivory/40">
-            {ringStory.renderNote} Drag to rotate.
-          </p>
         </div>
 
         {/* Feature tabs + buy box */}
