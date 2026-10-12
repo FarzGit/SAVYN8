@@ -47,7 +47,7 @@ export function Hero() {
       <HeroParallax />
 
       {/* Example note card (desktop) */}
-      <figure className="hero-note absolute right-[6%] top-[24%] hidden w-[min(340px,26vw)] lg:block" aria-label={hero.note.caption}>
+      <figure className="hero-note absolute right-[6%] top-[24%] hidden w-[min(340px,26vw)] lg:block" aria-label="Sevyn8 morning note">
         <div className="rounded-[22px] border border-white/15 bg-[rgb(10_26_20/0.42)] p-5 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)] backdrop-blur-xl backdrop-saturate-150">
           <div className="flex items-center justify-between">
             <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ivory/70">
@@ -64,7 +64,6 @@ export function Hero() {
             {hero.note.source}
           </p>
         </div>
-        <figcaption className="mt-2.5 pl-1 text-[11.5px] text-ivory/45">{hero.note.caption}</figcaption>
       </figure>
 
       {/* Copy */}

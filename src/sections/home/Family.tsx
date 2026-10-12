@@ -1,8 +1,8 @@
 import type { CSSProperties } from "react";
 import { TextLink } from "@/components/Button";
 import { DeviceGlyph } from "@/components/DeviceGlyph";
-import { Photo, RenderTag } from "@/components/Photo";
-import { SectionHeader, StatusNote } from "@/components/Section";
+import { Photo } from "@/components/Photo";
+import { SectionHeader } from "@/components/Section";
 import { family } from "@/content/home";
 import { devices, statusLabel } from "@/content/devices";
 import { siteStatus } from "@/config/site-status";
@@ -68,7 +68,6 @@ export function Family() {
                     {d.worn}
                   </span>
                 </div>
-                {d.photo.render && <RenderTag className="absolute bottom-[1.35rem] right-5" />}
               </div>
               <div className="flex flex-1 flex-col p-7">
                 <h3 className="text-[22px] font-medium tracking-tight">{d.name}</h3>
@@ -78,7 +77,6 @@ export function Family() {
             </li>
           ))}
         </ul>
-        <StatusNote className="mt-8">{family.note}</StatusNote>
       </div>
     </section>
   );

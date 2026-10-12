@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { Photo, RenderTag } from "@/components/Photo";
+import { Photo } from "@/components/Photo";
 import { Rich } from "@/components/Rich";
 import { whatItDoes } from "@/content/home";
 import { photos, products, type PhotoAsset } from "@/content/photos";
@@ -63,7 +63,6 @@ export function WhatItDoes() {
                 </p>
                 <p className="text-[clamp(1.1rem,1.6vw,1.4rem)] font-medium leading-snug tracking-[-0.015em]">{t.line}</p>
               </div>
-              {photo.render && <RenderTag className="absolute right-4 top-4" />}
             </li>
           );
         })}

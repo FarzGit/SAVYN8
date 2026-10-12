@@ -111,5 +111,4 @@ export const devicesPage = {
   orderTitle: "Why this order",
   order:
     "Ring first, because it reaches the most people. Mastoid next, because it adds signals no finger can read. Chest Patch after, for precision.",
-  note: "Images are Sevyn8 design renders. Nothing is on sale yet: the ring and Mastoid are coming soon, and Chest Patch is a concept. Product names are working names.",
 };

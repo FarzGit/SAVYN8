@@ -16,7 +16,6 @@ export const hero = {
     time: "6:12",
     text: "Your recovery is back to your normal. A good morning for the long run.",
     source: "From your Sevyn8 Ring",
-    caption: "Example of a Sevyn8 morning note",
   },
 };
 
@@ -46,7 +45,6 @@ export const whatItDoes = {
 export const ringStory = {
   eyebrow: "The ring",
   name: "The Sevyn8 Ring",
-  renderNote: "Illustrative render. Final design in progress.",
   steps: [
     {
       id: "assembled",
@@ -107,10 +105,9 @@ export const companion = {
     },
   ],
   example: {
-    label: "Example note",
+    label: "Morning note",
     text: "You've slept about 40 minutes less than your normal for three nights. Tonight, try starting your wind-down at 10:15.",
     action: "Add wind-down to calendar",
-    caption: "Illustrative example of the kind of note you'll get. Not a final app design.",
   },
   statusNote: "The Sevyn8 companion app is in testing. We'll show it here when it's ready.",
 };
@@ -130,7 +127,6 @@ export const family = {
   title: "Starting at the finger. Then the head and the *chest*.",
   intro:
     "Every device feeds one personal picture of you. The ring comes first, with a behind-the-ear patch close behind to read what a finger can't.",
-  note: "Ring and Mastoid images are Sevyn8 design renders. Nothing is on sale yet: both are coming soon, and Chest Patch is a concept. Product names are working names.",
   link: { label: "Meet the devices", href: "/devices/" },
 };
 

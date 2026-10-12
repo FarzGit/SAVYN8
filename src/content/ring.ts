@@ -5,9 +5,7 @@ export const ringPage = {
   eyebrow: "Sevyn8 Ring",
   title: "Worn on your finger. Working on your *day*.",
   sub: "A ring that learns what's normal for you and tells you, in plain words, what to do next.",
-  photosNote: "Photos of the production ring will appear here once units are made.",
   /** iPhone-style notifications beside the 3D ring. Illustrative, labelled as examples on the page. */
-  notificationsNote: "Example notifications, for illustration",
   notifications: [
     { title: "Morning note", short: "Recovery looks good. A solid day to train.", body: "You slept 22 minutes more than usual and recovery looks good. A solid day to train.", time: "7:12 AM" },
     { title: "Wind-down", short: "Start winding down at 10:15 tonight.", body: "Stress has run higher than usual today. Try starting your wind-down at 10:15 tonight.", time: "now" },

@@ -29,5 +29,4 @@ export const about = {
   privacyTitle: "Privacy by design",
   privacy:
     "Health data deserves more care than most data. The system is designed so raw signal stays on your device by default, language models only see structured features, and nothing on this site uses advertising pixels.",
-  founderNote: "Our founders' story, in their own words, is coming soon.",
 };

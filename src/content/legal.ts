@@ -8,8 +8,6 @@ import { site } from "@/config/site";
 export const disclaimer =
   "Sevyn8 products are for general wellness. They are not medical devices and do not diagnose, treat, cure or prevent any disease or condition.";
 
-export const reviewNote = "This page will be reviewed by counsel before Sevyn8 products go on sale.";
-
 export const lastUpdated = "10 October 2026";
 
 export interface LegalDoc {
