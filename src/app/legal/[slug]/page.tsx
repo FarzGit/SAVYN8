@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { StatusNote } from "@/components/Section";
-import { lastUpdated, legalDocs, reviewNote } from "@/content/legal";
+import { lastUpdated, legalDocs } from "@/content/legal";
 
 export const dynamicParams = false;
 
@@ -27,7 +26,6 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
         <p className="eyebrow mb-5">Legal</p>
         <h1 className="h2">{doc.title}</h1>
         <p className="mt-5 text-[14px] text-muted">Last updated {lastUpdated}</p>
-        <StatusNote className="mt-4">{reviewNote}</StatusNote>
         <div className="mt-12 space-y-12">
           {doc.sections.map((s) => (
             <section key={s.heading}>

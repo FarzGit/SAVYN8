@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { TextLink } from "@/components/Button";
 import { plain } from "@/components/Rich";
-import { SectionHeader, StatusNote } from "@/components/Section";
+import { SectionHeader } from "@/components/Section";
 import { about } from "@/content/about";
 import { Photo } from "@/components/Photo";
 import { photos } from "@/content/photos";
@@ -94,7 +94,6 @@ export default function AboutPage() {
           </h2>
           <div className="md:col-span-7 md:col-start-6">
             <p className="lede">{about.privacy}</p>
-            <StatusNote className="mt-10">{about.founderNote}</StatusNote>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
               <TextLink href="/devices/">Meet the devices</TextLink>
               <TextLink href="/partners/">Where this is going</TextLink>

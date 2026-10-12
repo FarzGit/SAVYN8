@@ -144,7 +144,7 @@ export function RingCanvas({
           src="/products/ring-product-sm.webp"
           srcSet="/products/ring-product-sm.webp 538w, /products/ring-product.webp 1076w"
           sizes="(min-width: 1024px) 50vw, 100vw"
-          alt="The Sevyn8 Ring (design render)"
+          alt="The Sevyn8 Ring"
           className="absolute inset-0 m-auto h-[80%] w-[80%] object-contain"
         />
       )}

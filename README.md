@@ -88,6 +88,7 @@ All photos are free Unsplash images (Unsplash License: commercial use allowed, n
 | `photos/partner-critical.webp` | Ecosystem, Partners | Alex Sheldon |
 | `photos/partner-covered.webp` | Ecosystem, Partners | Stephen Mease |
 | `photos/about.webp` | About | Mathis Mauprivez |
+| `photos/partners/*` | Partners page, one per category | Vitaly Gariev (fitness, mental health, doctors), Caroline Badran (food), Jp Valery (sleep), Happy & Spice (habits), Testalize.me (labs), National Cancer Institute (pharmacy), freestocks (women's health), YANGHONG YU (emergency), Ekaterina Shakharova (elder care), Ryan Collins (insurance), Marco López (travel health) |
 | `photos/waitlist.webp` | Waitlist | Sahil Pandita |
 
 **Swapping in your own shoot:** replace a file with one of the same name and update its `alt` text in `src/content/photos.ts` (hero alt text: `hero.imageAlt` in `src/content/home.ts`). Stock photos come in three widths (`name-1280.webp`, `name-1920.webp`, `name-2560.webp`) and the browser picks the right one for each screen. Hero files: `hero-1280/1920/2560/3200.webp` + `hero-1920.jpg` (landscape, about 3:2) and `hero-mobile-1290.webp/.jpg` (portrait 1290×2150), with the subject in the upper half. Real **ring product photos** go in `public/ring/` and are listed in `ring.photos` in `src/config/site-status.ts`; they appear on the ring page automatically.

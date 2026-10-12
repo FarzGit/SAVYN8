@@ -69,7 +69,6 @@ export function Companion() {
               </span>
             </div>
           </div>
-          <figcaption className="mt-4 text-[12.5px] text-ivory/45">{companion.example.caption}</figcaption>
         </figure>
       </div>
     </section>

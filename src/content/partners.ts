@@ -41,6 +41,31 @@ export const partnerGroups: Record<
   },
 };
 
+/** One photo per partner category (Unsplash, credits in the README). */
+const cat = (key: PartnerKey, alt: string, credit: string, focus?: string): PhotoAsset => ({
+  src: `/photos/partners/${key}-1280.webp`,
+  srcSet: `/photos/partners/${key}-1280.webp 1280w, /photos/partners/${key}-1920.webp 1920w`,
+  alt,
+  credit,
+  focus,
+});
+
+export const partnerCategoryPhotos: Record<PartnerKey, PhotoAsset> = {
+  fitness: cat("fitness", "A trainer coaching a woman through a barbell lift in a bright gym", "Vitaly Gariev", "45% 40%"),
+  food: cat("food", "Walnuts in a ceramic dish on a dark table", "Caroline Badran"),
+  sleep: cat("sleep", "A softly lit bed beside a bedside lamp at night", "Jp Valery"),
+  mentalHealth: cat("mentalHealth", "A young woman meditating cross-legged at home", "Vitaly Gariev", "50% 40%"),
+  habits: cat("habits", "Someone writing in a journal next to a cup of coffee", "Happy & Spice"),
+  doctors: cat("doctors", "A doctor on a video consultation with a patient", "Vitaly Gariev"),
+  labs: cat("labs", "Rows of colour-capped sample tubes in a lab", "Testalize.me"),
+  pharmacy: cat("pharmacy", "A pharmacist reaching for medicine on a pharmacy shelf", "National Cancer Institute", "35% 40%"),
+  womensHealth: cat("womensHealth", "A pregnant woman cradling her belly in soft window light", "freestocks"),
+  emergency: cat("emergency", "An ambulance with its lights on, moving at night", "YANGHONG YU"),
+  elderCare: cat("elderCare", "A grandmother being hugged by her granddaughter in warm light", "Ekaterina Shakharova", "45% 40%"),
+  insurance: cat("insurance", "A mother and child walking hand in hand along a park path", "Ryan Collins"),
+  travelHealth: cat("travelHealth", "A traveller waiting at an airport window at sunset", "Marco López", "60% 50%"),
+};
+
 export const partnerCategories: Record<PartnerKey, { name: string; line: string }> = {
   fitness: {
     name: "Fitness",

@@ -7,7 +7,7 @@ import { SectionHeader, StatusNote } from "@/components/Section";
 import { site } from "@/config/site";
 import { siteStatus } from "@/config/site-status";
 import { theme } from "@/config/theme";
-import { GROUP_ORDER, partnerCategories, partnerGroupPhotos, partnerGroups, partnersPage } from "@/content/partners";
+import { GROUP_ORDER, partnerCategories, partnerCategoryPhotos, partnerGroupPhotos, partnerGroups, partnersPage } from "@/content/partners";
 
 export const metadata: Metadata = {
   title: "Partners & ecosystem",
@@ -69,15 +69,20 @@ export default function PartnersPage() {
                   return (
                     <li
                       key={c.key}
-                      className="panel flex flex-col p-6"
+                      className="panel group flex flex-col overflow-hidden"
                       data-reveal
                       style={{ "--reveal-i": i } as CSSProperties}
                     >
-                      <div className="flex items-start justify-between gap-4">
-                        <h3 className="text-[19px] font-medium tracking-tight">{cat.name}</h3>
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Photo
+                          photo={partnerCategoryPhotos[c.key]}
+                          sizes="(min-width: 1024px) 26vw, (min-width: 640px) 45vw, 100vw"
+                          className="transition-transform duration-[1.2s] ease-[var(--ease-calm)] group-hover:scale-[1.05]"
+                        />
+                        <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_top,rgb(10_26_20/0.55),transparent_55%)]" />
                         <span
-                          className={`inline-flex shrink-0 items-center gap-2 rounded-full border px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.12em] ${
-                            live ? "border-ivory/30 text-ivory" : "border-line-strong text-muted"
+                          className={`absolute right-3 top-3 inline-flex items-center gap-2 rounded-full border bg-[rgb(10_26_20/0.55)] px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.12em] backdrop-blur-md ${
+                            live ? "border-ivory/30 text-ivory" : "border-white/15 text-ivory/75"
                           }`}
                         >
                           <span
@@ -85,13 +90,15 @@ export default function PartnersPage() {
                             style={
                               live
                                 ? { background: theme.ivory }
-                                : { border: `1px solid ${mind ? theme.mind : theme.muted}` }
+                                : { border: `1px solid ${mind ? theme.mind : "rgb(251 250 246 / 0.6)"}` }
                             }
                           />
                           {live ? "Live" : "Direction"}
                         </span>
                       </div>
-                      <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ivory/60">{cat.line}</p>
+                      <div className="flex flex-1 flex-col p-6">
+                      <h3 className="text-[19px] font-medium tracking-tight">{cat.name}</h3>
+                      <p className="mt-2 flex-1 text-[15px] leading-relaxed text-ivory/60">{cat.line}</p>
                       {live && c.partner && (
                         <div className="mt-6 flex items-center justify-between gap-4 border-t border-line pt-5">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -102,6 +109,7 @@ export default function PartnersPage() {
                           </a>
                         </div>
                       )}
+                      </div>
                     </li>
                   );
                 })}

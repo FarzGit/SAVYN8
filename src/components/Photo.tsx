@@ -35,13 +35,3 @@ export function Photo({
   );
 }
 
-/** Small label for Sevyn8 design renders, so a render is never mistaken for a product photo. */
-export function RenderTag({ className = "" }: { className?: string }) {
-  return (
-    <span
-      className={`rounded-full bg-[rgb(10_26_20/0.55)] px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.12em] text-ivory/70 backdrop-blur-md ${className}`}
-    >
-      Design render
-    </span>
-  );
-}

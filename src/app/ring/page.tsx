@@ -9,7 +9,7 @@ import { faq, ringPage } from "@/content/ring";
 import { ringStory } from "@/content/home";
 import { StatusChip } from "@/sections/home/Family";
 import { WaitlistBand } from "@/sections/home/Story";
-import { Photo, RenderTag } from "@/components/Photo";
+import { Photo } from "@/components/Photo";
 import { RingCanvas } from "@/three/RingCanvas";
 import { NotificationStack } from "@/components/NotificationStack";
 import { photos, products, type PhotoAsset } from "@/content/photos";
@@ -112,9 +112,6 @@ export default function RingPage() {
                 </svg>
                 Drag to rotate
               </p>
-              <span className="text-right font-mono text-[11px] uppercase tracking-[0.12em] text-ivory/40">
-                3D design model · {ringPage.notificationsNote.toLowerCase()}
-              </span>
             </div>
             <NotificationStack compact className="mt-5 md:hidden" />
           </div>
@@ -134,7 +131,6 @@ export default function RingPage() {
         <div className="grid gap-3 md:grid-cols-12 md:grid-rows-2">
           <figure className="relative aspect-square overflow-hidden rounded-[22px] border border-line md:col-span-7 md:row-span-2 md:aspect-auto" data-reveal>
             <Photo photo={products.ringFinger} sizes="(min-width: 768px) 58vw, 100vw" />
-            <RenderTag className="absolute bottom-4 right-4" />
           </figure>
           {[
             { photo: photos.lifeSwim, label: "Swim days", line: "Every session, read against your own normal." },
@@ -152,7 +148,6 @@ export default function RingPage() {
                 <p className="eyebrow text-ivory/60">{t.label}</p>
                 <p className="mt-1.5 text-[17px] font-medium tracking-tight">{t.line}</p>
               </figcaption>
-              {t.photo.render && <RenderTag className="absolute right-4 top-4" />}
             </figure>
           ))}
         </div>
@@ -199,9 +194,7 @@ export default function RingPage() {
               </li>
             ))}
           </ul>
-        ) : (
-          <StatusNote className="mt-6">{ringPage.photosNote}</StatusNote>
-        )}
+        ) : null}
       </section>
 
       {/* What it reads */}
@@ -236,7 +229,6 @@ export default function RingPage() {
             <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-2 text-[12.5px] text-ivory/50 md:mt-6">
               <span className="md:hidden">Inside the ring: {ringPage.insideParts.join(", ").toLowerCase()}.</span>
               <span className="hidden md:inline">Inside the ring, from the outside in.</span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-ivory/40">Design render · final components to be confirmed</span>
             </figcaption>
           </figure>
           <ul className="mt-12 grid gap-4 md:grid-cols-3">

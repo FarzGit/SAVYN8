@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import type { CSSProperties } from "react";
 import { PrimaryCta, TextLink } from "@/components/Button";
 import { DeviceGlyph } from "@/components/DeviceGlyph";
-import { Photo, RenderTag } from "@/components/Photo";
+import { Photo } from "@/components/Photo";
 import { plain } from "@/components/Rich";
-import { SectionHeader, StatusNote } from "@/components/Section";
+import { SectionHeader } from "@/components/Section";
 import { siteStatus } from "@/config/site-status";
 import { theme } from "@/config/theme";
 import { devices, devicesPage } from "@/content/devices";
@@ -51,7 +51,6 @@ export default function DevicesPage() {
                   </span>
                   <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-ivory/85">{d.worn}</span>
                 </div>
-                {d.photo.render && <RenderTag className="absolute right-6 top-6" />}
               </div>
               <div className="relative p-7 md:col-span-7 md:p-12">
                 <div className="flex flex-wrap items-center gap-3">
@@ -86,7 +85,6 @@ export default function DevicesPage() {
                 {d.detail && (
                   <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl border border-line bg-[radial-gradient(60%_70%_at_50%_45%,rgb(210_174_134/0.14),transparent_70%)]">
                     <Photo photo={d.detail} className="!object-contain p-4 sm:p-6" sizes="(min-width: 768px) 50vw, 100vw" />
-                    <RenderTag className="absolute bottom-3 right-3" />
                   </div>
                 )}
                 <p className="mt-8 border-t border-line pt-6 text-[14.5px] leading-relaxed text-ivory/55">{d.why}</p>
@@ -100,7 +98,6 @@ export default function DevicesPage() {
             </article>
           );
         })}
-        <StatusNote className="pt-4">{devicesPage.note}</StatusNote>
       </section>
 
       <section aria-labelledby="platform-title" className="section-y">
