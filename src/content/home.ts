@@ -104,12 +104,7 @@ export const companion = {
       body: "Designed so raw signal stays on your phone by default. You choose what's shared, and with whom.",
     },
   ],
-  example: {
-    label: "Morning note",
-    text: "You've slept about 40 minutes less than your normal for three nights. Tonight, try starting your wind-down at 10:15.",
-    action: "Add wind-down to calendar",
-  },
-  statusNote: "The Sevyn8 companion app is in testing. We'll show it here when it's ready.",
+  statusNote: "The Sevyn8 app is in testing now and arrives with the ring, for iPhone and Android.",
 };
 
 export const ecosystem = {

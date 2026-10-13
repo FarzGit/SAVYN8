@@ -148,6 +148,16 @@
 }
 .notif { animation: notif-in 0.7s var(--ease-calm) both; }
 
+/* App showcase: fanned phones, each floating gently */
+.app-phone {
+  transform: translate(-50%, -50%) translateX(var(--x)) rotate(var(--r)) scale(var(--s));
+  animation: app-float 7s ease-in-out infinite;
+}
+@keyframes app-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+
 /* Auto-advance progress line on the ring feature list */
 @keyframes tab-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
